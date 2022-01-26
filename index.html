@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pizza</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css" integrity="sha512-T584yQ/tdRR5QwOpfvDfVQUidzfgc2339Lc8uBDtcp/wYu80d7jwBgAxbyMh0a9YM9F8N3tdErpFI8iaGx6x5g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 id=titolo>pizza</h1>
+    <button onclick="OnNuovo()">AGGIUNGI ORDINE</button>
+    
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ordine</th>
+                <!--<th>PASSWORD</th>-->
+                <!-- <th>COMANDI</th> -->
+            </tr>
+        </thead>
+        <tbody>   
+        </tbody>
+    </table>
+
+    <div class="overlay" onclick="ChiediChiudiOverlay()"></div>
+        <div class="modal"   id="modal-modifica">
+            <h3>MODIFICA ORDINE</h3>
+       
+            <div style="width:800px;height: 800px; overflow-x:  scroll; overflow-y:  scroll;border:1px solid black;">
+                <label for="tipo">tipo</label>
+                <input type="text" name="tipo" placeholder=tipo>
+    
+                <label for="idUtente">idUtente</label>
+                <input type="text" name="idUtente" placeholder=idUtente>
+    
+                <label for="nome">nome</label>
+                <input type="text" name="nome" >
+    
+                <label for="cognome">cognome</label>
+                <input type="text" name="cognome">
+    
+                <label for="cell">cell</label>
+                <input type="text" name="cell">
+                
+                <label for="via">via</label>
+                <input type="text" name="via">
+                
+                <label for="paese">paese</label>
+                <input type="text" name="paese">
+                
+                <label for="orario">orario</label>
+                <input type="text" name="orario">
+                <div>
+                    <button onclick="Annulla()">ANNULLA</button>
+                    <button onclick="OnSalvaNuovo()">SALVA</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal" id="modal-nuovo">
+            <h3>AGGIUNGI NUOVA ORDINE</h3>
+            <div style="width:800px;height: 800px; overflow-x:  scroll; overflow-y:  scroll;border:1px solid black;">
+            <label for="tipo">tipo</label>
+            <input type="text" name="tipo" placeholder=tipo>
+
+            <label for="idUtente">idUtente</label>
+            <input type="text" name="idUtente" placeholder=idUtente>
+
+            <label for="nome">nome</label>
+            <input type="text" name="nome" >
+
+            <label for="cognome">cognome</label>
+            <input type="text" name="cognome">
+
+            <label for="cell">cell</label>
+            <input type="text" name="cell">
+            
+            <label for="via">via</label>
+            <input type="text" name="via">
+            
+            <label for="paese">paese</label>
+            <input type="text" name="paese">
+            
+            <label for="orario">orario</label>
+            <input type="text" name="orario">
+            <div>
+                <button onclick="Annulla()">ANNULLA</button>
+                <button onclick="OnSalvaNuovo()">SALVA</button>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
